@@ -9,19 +9,19 @@ html{
 }
 
 body {
-  background: rgb(0, 97, 45);
+  background: rgb(0, 31, 47); /* Darker background */
   color: white;
-  font-family: 'poppins', sans-serif ;
+  font-family: 'poppins', sans-serif;
 }
 
-.App{
+.App {
   min-height: 100vh;
   display: flex;
 }
 
 .sidebar {
   flex: 3;
-  border-right: 1px solid rgb(12, 53, 21);
+  border-right: 1px solid rgb(32, 53, 64); /* Lighter border for contrast */
 }
 
 .main {
@@ -38,7 +38,7 @@ body {
 
 .upperside {
   padding: 2.5rem;
-  border-bottom: 1px solid rgb(12, 53, 21);
+  border-bottom: 1px solid rgb(32, 53, 64); /* Darker border */
   height: 70%;
 }
 
@@ -48,18 +48,17 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.uppersidetop>img {
+.uppersidetop > img {
   width: 100px;
 }
 
-.addbtn{
+.addbtn {
   height: 2rem;
   padding-right: 1rem;
-  cursor: pointer;
 }
 
 .midbtn {
-  background: #339a54;
+  background: #28a745; /* Green background for buttons */
   border: none;
   width: 25rem;
   color: white;
@@ -68,25 +67,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; 
+  margin: 0 auto;
   margin-bottom: 3rem;
   border-radius: 0.5rem;
-  cursor: pointer;
 }
 
 .query {
   display: flex;
   align-items: center;
-  background: transparent;
-  color: rgba(222,222,222,1);
+  background: rgb(33, 49, 60); /* Slightly lighter background for query box */
+  color: rgba(222, 222, 222, 1);
   padding: 1.5rem;
   width: 25rem;
   margin: 1 auto;
   border-radius: 0.5rem;
-  border: 1px solid rgb(12, 53, 21);
+  border: 1px solid rgb(32, 53, 64);
 }
 
-.query>img {
+.query > img {
   margin-right: 2rem;
   object-fit: cover;
   height: 1.75rem;
@@ -101,6 +99,12 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.listitems:hover {
+  background-color: #444; /* Darker hover effect */
 }
 
 .listitemsimg {
@@ -108,17 +112,16 @@ body {
   padding-right: 1rem;
 }
 
-.listitems:nth-child(1)>.listitemsimg {
+.listitems:nth-child(1) > .listitemsimg {
   margin-right: 0.5rem;
 }
 
-.listitems:nth-child(3)>.listitemsimg {
+.listitems:nth-child(3) > .listitemsimg {
   margin-right: 0.75rem;
 }
 
-
 .main {
-  min-height: calc(100vh -14rem);
+  min-height: calc(100vh - 14rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,12 +139,14 @@ body {
 }
 
 .chat {
-  margin: 1rem ;
+  margin: 1rem;
   padding: 2rem 3rem;
   font-size: 1.2rem;
   display: flex;
   align-items: flex-start;
   text-align: justify;
+  background: rgb(33, 49, 60); /* Darker background for chat bubbles */
+  border-radius: 0.5rem;
 }
 
 .chatimg {
@@ -157,7 +162,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.chatfooter{
+.chatfooter {
   margin-top: auto;
   width: 100%;
   display: flex;
@@ -166,31 +171,76 @@ body {
   justify-content: center;
 }
 
-.inp{
+.inp {
   padding: 0.5rem;
-  background: rgb(11, 60, 25);
+  background: rgb(22, 39, 46); /* Slightly darker background */
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
   width: 68rem;
 }
 
-.inp>input {
+.inp > input {
   width: calc(100% - 3rem);
   outline: none;
   padding: 1.25rem;
   color: white;
+  background: rgb(33, 49, 60); /* Dark input background */
+  border: none;
 }
 
-.inp>input, .send{
+.inp > input, .send {
   background: transparent;
   border: none;
 }
 
-.send {
-  cursor: pointer;
+.chatfooter > p {
+  margin: 2rem 0;
 }
 
-.chatfooter>p{ 
-  margin: 2rem 0;
+.history-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.history-button:hover {
+  background-color: #218838;
+}
+
+.history-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #218838;
+}
+
+.listitems {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.listitems:hover {
+  background-color: #222; /* Dark hover highlight */
+  color: #fff;
+}
+
+.listitemsimg {
+  margin-right: 10px;
+}
+
+.page {
+  font-size: 24px;
+  color: #ccc; /* Lighter color for page numbers */
+  text-align: center;
+  margin-top: 50px;
 }

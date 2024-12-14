@@ -19,6 +19,16 @@ async function generateContent(prompt) {
   }
 }
 
+// For testing withoit API Key. 
+
+// const generateContent = async (input) => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(`Mocked response for: ${input}`);
+//     }, 1000); // Simulate API delay
+//   });
+// };
+
 module.exports = {
   generateContent,
 };
